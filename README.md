@@ -20,3 +20,50 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+  ////////////////////// exercice 2
+  #include <stdio.h>
+
+int main() {
+    int i,j,s,t;
+    int m[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    printf("give the size of your matrix = ");
+    scanf("%d",&s);
+    printf("the first matrix : ");
+    printf("\n");
+    for ( i = 0; i < s; i++) {
+        for (int j = 0; j < s; j++) {
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+    printf("the secod matrix :");
+    printf("\n");
+    for ( i = 0; i < s; i++) {
+        for (j = i + 1; j < s; j++) {
+             t = m[i][j];
+            m[i][j] = m[j][i];
+            m[j][i] = t;
+        }
+    }
+    for ( i = 0; i < s; i++) {
+        for (int j = 0; j < s; j++) {
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+  
